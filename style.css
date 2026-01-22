@@ -1,0 +1,17 @@
+.btn{
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 40px;
+    
+}
+
+.btn:hover{
+    color: white;
+    background-color:rgb(35, 35, 217);
+    width: 100px;
+    height: 40px;
+    transition:ease-in-out;
+    cursor: pointer;
+    text-decoration: solid;
+}
