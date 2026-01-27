@@ -69,6 +69,6 @@
 
 console.log("first line")
 setTimeout(() => {
-    
-}, timeout);
+    console.log("maggie is ready after 2sec")
+}, 2000);
 console.log("Second line")
