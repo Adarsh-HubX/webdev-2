@@ -67,8 +67,34 @@
 
 // lecture-9
 
-console.log("first line")
-setTimeout(() => {
-    console.log("maggie is ready after 2sec")
-}, 2000);
-console.log("Second line")
+alert("yeahhhhhhhh!!")
+// console.log("first line")
+// setTimeout(() => {
+//     console.log("maggie is ready after 2sec")
+// }, 2000);
+// console.log("Second line")
+
+
+//lecture-11
+const name=document.querySelector("#name");
+const btn=document.querySelector(".btn");
+// const remove=document.querySelector(".remove");
+const list=document.querySelector(".list");
+
+btn.addEventListener("click",()=>{
+    if(name.value===""){
+        alert("Enter the name!!")
+        return;
+    }
+    const li=document.createElement("li");
+    const dlt=document.createElement("button");
+    dlt.innerText="delete";
+    li.innerText=name.value;
+    dlt.addEventListener("click",()=>{
+        list.removeChild(li)
+    })
+    list.appendChild(dlt)
+    li.appendChild(li)
+    name.value="" 
+    })
+    
