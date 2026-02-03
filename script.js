@@ -1,3 +1,5 @@
+// alert("yaahooo!!")
+
 // // // Lecture1
 // // // const para= document.querySelector("p")
 // // // para.innerText = "This is a New paragraph"
@@ -67,7 +69,7 @@
 
 // lecture-9
 
-alert("yeahhhhhhhh!!")
+
 // console.log("first line")
 // setTimeout(() => {
 //     console.log("maggie is ready after 2sec")
@@ -75,26 +77,40 @@ alert("yeahhhhhhhh!!")
 // console.log("Second line")
 
 
-//lecture-11
-const name=document.querySelector("#name");
-const btn=document.querySelector(".btn");
-// const remove=document.querySelector(".remove");
-const list=document.querySelector(".list");
+//lecture-10
+// const name=document.querySelector("#name");
+// const btn=document.querySelector(".btn");
+// // const remove=document.querySelector(".remove");
+// const list=document.querySelector(".list");
 
-btn.addEventListener("click",()=>{
-    if(name.value===""){
-        alert("Enter the name!!")
-        return;
-    }
-    const li=document.createElement("li");
-    const dlt=document.createElement("button");
-    dlt.innerText="delete";
-    li.innerText=name.value;
-    dlt.addEventListener("click",()=>{
-        list.removeChild(li)
-    })
-    list.appendChild(dlt)
-    li.appendChild(li)
-    name.value="" 
-    })
+// btn.addEventListener("click",()=>{
+//     if(name.value===""){
+//         alert("Enter the name!!")
+//         return;
+//     }
+//     const li=document.createElement("li");
+//     const dlt=document.createElement("button");
+//     dlt.innerText="delete";
+//     li.innerText=name.value;
+//     dlt.addEventListener("click",()=>{
+//         list.removeChild(li)
+//     })
+//     list.appendChild(dlt)
+//     li.appendChild(li)
+//     name.value="" 
+//     })
     
+
+//lecture 11
+function print(num){
+    setTimeout(()=>{
+        console.log("Inside print")
+        num()
+    },2000)
+}
+
+function sample(){ //callback fn
+    console.log("Inside callback")
+}
+
+print(sample)
