@@ -102,15 +102,142 @@
     
 
 //lecture 11
-function print(num){
-    setTimeout(()=>{
-        console.log("Inside print")
-        num()
-    },2000)
+// function print(num){
+//     setTimeout(()=>{
+//         console.log("Inside print")
+//         num()
+//     },2000)
+// }
+
+// function sample(){ //callback fn
+//     console.log("Inside callback")
+// }
+
+// print(sample)
+
+// console.log("starting homework...");
+// setTimeout(() => {
+//     console.log("homework done!");
+//     console.log("starting dinner");
+
+//     setTimeout(() => {
+//         console.log("dinner done!");
+//         console.log("getting ready to go out");
+
+//         setTimeout(() => {
+//             console.log("going to the playground!");
+            
+//         }, 1000);
+//     }, 1500);
+    
+// }, 2000);
+
+// function finishHomework(callback) {
+//     console.log("starting homework..");
+//     setTimeout(() => {
+//         console.log("homework done!");
+//         callback();
+//     }, timeout);
+// }
+
+// async function getData()(
+//     try(
+//         const response=await fetch=("https://dummy.json.com")
+//     if(response.ok==false)
+
+
+//     )
+// )
+
+// console.log(response)
+// const data=await response.json()
+// console.log(data)
+// data.products.forEach(product)=>{
+//     console.log(product.title)
+// })
+// 2
+// // get request and
+
+// const response=await fetch=""
+// headers = ( 'content type'; 'application.json'),
+// body: JSON.stringify(
+//     "title": "Macbook m4"
+//     "description": :large ipsum color sist anwet 
+//     "catoegry" "electornics",
+//     "price": 353e,
+//     "desoucntPercentage", 353
+//     "rating: 353
+//     "staco: 353e
+    
+//     {sd"
+// )
+
+
+// LECTURE 18
+//local storage
+// localStorage.setItem("name", "Adarsh")
+// localStorage.setItem("age", 18)
+
+// const uname=localStorage.getItem("name")
+// console.log(uname)
+// console.log(localStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+// localStorage.clear()
+
+//session storage
+// sessionStorage.setItem("name", "Adarsh")
+// sessionStorage.setItem("age", 18)
+
+// const uname=sessionStorage.getItem("name")
+// console.log(uname)
+// console.log(sessionStorage.getItem("age"))
+
+// localStorage.removeItem("name")
+
+
+
+// document.cookie="name=Adarsh; expires=Thu, 19 Feb 2026 09:00:00 IST;"
+// document.cookie="age=18; expires=Thu, 19 Feb 2026 09:00:00 IST;"
+
+// console.log(document.cookie)
+
+// generators
+// function* generate(){
+//     for (let index = 1; index <=4; index ++) {
+//         yield index
+//     }
+// }
+
+// const gen=generate()
+// console.log(gen)
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+// console.log(gen.next())
+
+
+// function add(a,b,c){
+//     return a+b+c
+// }
+
+function add(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
+    }
 }
 
-function sample(){ //callback fn
-    console.log("Inside callback")
-}
+//method1
+const first=add(1)
+console.log(first)
+const second=first(2)
+console.log(second)
+const third=second(3)
+console.log(third)
 
-print(sample)
+//method2
+console.log(add(1)(2)(3));
+
+
